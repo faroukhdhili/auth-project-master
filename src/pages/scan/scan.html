@@ -1,0 +1,39 @@
+
+<ion-content class="background" style="height:500px;top: 70px" >
+
+
+  <ion-list  class="list"*ngFor="let Product of products;let i = index" >
+              <ion-item class="list">
+                <ion-thumbnail class="list" item-start>
+                  <img  src="data:image/png;base64,{{Product.image}}" >
+                </ion-thumbnail>
+                <h2 style="transition:all 0.3s ease;">{{Product.name}}</h2>
+                <p style="transition:all 0.3s ease;">{{Product.price}}</p>
+                
+              
+                    <p style="left:50px" >Quantity :{{Product.qty}}<p>
+                      
+                      <ion-icon name="remove-circle" (click)="reduceqty(i)"></ion-icon>
+                      <ion-icon name="add-circle" (click)="addqty(i)"></ion-icon>
+                      <ion-icon name="trash" item-end   (click)="reduceqty(i)"></ion-icon>
+
+              </ion-item>
+            </ion-list>
+        
+            </ion-content>
+            <ion-content class="lastone" style="top: 465px" overflow-scroll="false">
+
+            
+       
+              <button  ion-button style="size: standard"(click)="Scan();">Scan</button>
+              <button ion-button style="size: standard" (click)="nextpage2()">Cart</button>
+             <p class="email">{{email}}</p> <button   class="logoutLblPos"  ion-button (click)="logOut()">Logout</button>
+            </ion-content>
+               
+              
+         
+              
+              
+
+
+

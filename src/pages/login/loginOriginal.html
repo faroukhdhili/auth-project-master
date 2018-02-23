@@ -1,0 +1,28 @@
+<ion-header >
+    <ion-navbar color='primary'>
+      <ion-title align='center' >
+       Login
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+      <ion-item>
+          <ion-label color="primary" floating>Email Address</ion-label>
+          <ion-input type="email" [(ngModel)]="user.email" required clearInput></ion-input>
+        </ion-item>
+  
+        <ion-item>
+            <ion-label color="primary" floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="user.password" clearInput ></ion-input>
+          </ion-item>
+  
+          <button ion-button (click)="login(user)" >Login</button>
+          <button ion-button (click)="loginFacebook()" >
+            <ion-icon name="logo-facebook"></ion-icon>
+          </button>
+          <button ion-button color='light' (click)="register()" >Register</button>
+  
+  </ion-content>
+  

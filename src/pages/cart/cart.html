@@ -1,0 +1,22 @@
+<ion-content class="background">
+
+
+
+
+    
+
+  <ion-list>
+          
+          <ion-item>
+                  <ion-label color="primary" stacked>Enter your wallet adress</ion-label>
+                  <ion-input  [(ngModel)]="clientadress"  type="text" placeholder="Wallet adress"></ion-input>
+                </ion-item>
+          </ion-list>
+  
+          <h1>{{topay}} euro</h1>
+          <button ion-button (click)="bezahlen();purchase()">Purchase</button>
+          <button ion-button (click)="returnpage()">return</button>
+          
+          <p class="email">{{email}}</p><button class="logoutLblPos" ion-button (click)="logOut()"> Logout</button>
+  
+  </ion-content>
